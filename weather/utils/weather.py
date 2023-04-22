@@ -16,6 +16,7 @@ def fetch_weather_data(city_name: str) -> dict:
             'pressure': weather_data['main']['pressure'],
             'humidity': weather_data['main']['humidity'],
             'weather_condition': weather_data['weather'][0]['description'],
+            'main': weather_data['weather'][0]['main'],
             'wind_speed': weather_data['wind']['speed'],
             'wind_gust': weather_data['wind'].get('gust'),
             'wind_deg': weather_data['wind']['deg'],

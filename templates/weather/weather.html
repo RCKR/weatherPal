@@ -4,10 +4,13 @@
 <head>
     <title>Weather App</title>
     <link rel="stylesheet" type="text/css" href="{% static 'weather/CSS/weather_style.css' %}">
+    <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>
+    <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
+
 
 </head>
 <body>
-    <h1>Weather App</h1>
+    <h1>Weather App <i class="{{ city_data.icon }}"></i></h1>
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
@@ -15,16 +18,17 @@
     </form>
     <hr>
     <h2>Weather Information</h2>
-    <p>City: {{ city_data.name }}</p>
+    <p>City: {{ city_data.city }}</p>
     <p>Country: {{city_data.country}}</p>
     <p>Temperature: {{ city_data.temperature }}</p>
     <p>Pressure: {{ city_data.pressure }}</p>
     <p>Humidity: {{ city_data.humidity }}</p>
-    <p>Weather Condition: {{ city_data.weather_condition }}</p>
+    <p>Weather Condition:  {{ city_data.weather_condition }}</p>
     <p>Wind Speed: {{ city_data.wind_speed }}</p>
     <p>Wind Gust: {{ city_data.wind_gust }}</p>
     <p>Wind Direction: {{ city_data.wind_deg }}</p>
-    <p>Time: {{ city_data.datetime }}</p>
-    <p>Timezone: {{ city_data.timezone }}</p>
+    <p>Time: {{ city_data.dt }}</p>
+    <p>Timezone: {{ city_data.tz }}</p>
 </body>
 </html>
+
