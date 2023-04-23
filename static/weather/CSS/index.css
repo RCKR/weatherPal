@@ -1,0 +1,124 @@
+/* Set box-sizing for all elements to border-box */
+* {
+	box-sizing: border-box;
+}
+
+/* Remove default margin and padding from body element */
+body {
+	margin: 0;
+	padding: 0;
+}
+
+/* Style for the navigation bar */
+nav {
+	display: flex;
+	align-items: center;
+	background-color: #222;
+	color: #fff;
+	height: 60px;
+}
+
+/* Style for the left side of the navigation bar */
+.nav-left {
+	display: flex;
+	margin-left: 20px;
+}
+
+/* Style for the links in the left side of the navigation bar */
+.nav-left a {
+	color: #fff;
+	margin-right: 20px;
+}
+
+/* Style for the middle of the navigation bar */
+.nav-middle {
+	flex-grow: 1;
+	text-align: center;
+}
+
+/* Style for the right side of the navigation bar */
+.nav-right {
+	display: flex;
+	align-items: center;
+	margin-right: 20px;
+}
+
+/* Style for the profile button */
+.profile-btn {
+	display: flex;
+	align-items: center;
+	color: #fff;
+	text-decoration: none;
+	margin-left: 20px;
+}
+
+/* Style for the profile picture */
+.profile-btn img {
+	border-radius: 50%;
+	height: 30px;
+	width: 30px;
+	margin-right: 10px;
+}
+
+/* Style for the main content */
+main {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	padding: 50px;
+}
+
+.dashboard {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.dashboard-item {
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	margin: 10px;
+	padding: 20px;
+	flex-basis: calc(33.33% - 20px);
+}
+
+.dashboard-item h2 {
+	margin-top: 0;
+}
+
+@media screen and (max-width: 768px) {
+	.dashboard-item {
+		flex-basis: calc(50% - 20px);
+	}
+}
+
+
+/* Style for the footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex
+  }
+  
+
+/* Style for the footer links */
+.footer-links {
+	display: flex;
+    color: #fff;
+	justify-content: space-around;
+	flex-grow: 1;
+}
+
+.footer-links a {
+    color: white;
+}
+
+
