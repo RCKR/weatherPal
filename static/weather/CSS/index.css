@@ -9,6 +9,11 @@ body {
 	padding: 0;
 }
 
+a {
+    text-decoration: none;
+    color: #fff
+}
+
 /* Style for the navigation bar */
 nav {
 	display: flex;
@@ -34,6 +39,8 @@ nav {
 .nav-middle {
 	flex-grow: 1;
 	text-align: center;
+    color: #fff;
+
 }
 
 /* Style for the right side of the navigation bar */

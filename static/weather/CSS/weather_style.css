@@ -4,22 +4,51 @@
     padding: 0;
     box-sizing: border-box;
   }
-  
-  /* Create a margin around the page */
-  body {
-    margin: 20px;
-    background-color: #f2f2f2;
-    font-family: Arial, sans-serif;
-    line-height: 1.5;
+
+  a {
+    text-decoration: none;
+    color: #fff;
   }
-  
-  /* Style the header */
-  header {
+
+    /* Style for the navigation bar */
+  nav {
+    display: flex;
+    align-items: center;
     background-color: #333;
     color: #fff;
-    padding: 20px;
-    text-align: center;
+    height: 60px;
+    margin-bottom: 30px;
   }
+
+  /* Style for the left side of the navigation bar */
+  .nav-left {
+    display: flex;
+    margin-left: 20px;
+    color: #fff
+  }
+
+  /* Style for the links in the left side of the navigation bar */
+  .nav-left a {
+    color: #fff;
+    margin-right: 20px;
+  }
+
+  /* Style for the middle of the navigation bar */
+  .nav-middle {
+    flex-grow: 1;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+
+  }
+
+  /* Style for the right side of the navigation bar */
+  .nav-right {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+  
   
   /* Style the form */
   form {
@@ -57,21 +86,12 @@
     background-color: #555;
   }
   
-  /* Style the weather information section */
-  section {
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    margin: 20px auto;
-    max-width: 500px;
-    padding: 20px;
-    border: 1px solid #ccc;
-  }
   
   /* Style the weather information headings */
   h2 {
     font-size: 24px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
+    text-align: center;
   }
   
   /* Style the weather information paragraphs */
@@ -79,4 +99,45 @@
     font-size: 16px;
     margin-bottom: 5px;
   }
+  
+
+  table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: #333;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    padding: 10px;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    border-right: 1px solid #fff;
+  }
+  
+  th {
+    text-align: center;
+  }
+  
+  td {
+    text-align: center;
+  }
+
+  td:first-child {
+    text-align: left;
+  }
+  
+  th:last-child, td:last-child {
+    border-right: none;
+  }
+  
+  tr:last-child td {
+    border-bottom: none;
+  }
+
+  
+  
   

@@ -10,25 +10,85 @@
 
 </head>
 <body>
-    <h1>Weather App <i class="{{ city_data.icon }}"></i></h1>
+    <nav>
+		<div class="nav-left">
+			<h1>WeatherPal  <i class="{{ city_data.icon }}"></i></h1>
+		</div>
+		<div class="nav-middle">
+			<h1><a href="{% url 'home_page' %}">WeatherPal Home</a></h1>
+		</div>
+		<div class="nav-right">
+			<a href="#" class="profile-btn">
+				<img src="profile-pic.jpg" alt="Profile Picture">
+				My Profile
+			</a>
+		</div>
+	</nav>
+
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">Submit</button>
     </form>
-    <hr>
+
     <h2>Weather Information</h2>
-    <p>City: {{ city_data.city }}</p>
-    <p>Country: {{city_data.country}}</p>
-    <p>Temperature: {{ city_data.temperature }}°C</p>
-    <p>Pressure: {{ city_data.pressure }}</p>
-    <p>Humidity: {{ city_data.humidity }}</p>
-    <p>Weather Condition:  {{ city_data.weather_condition }}</p>
-    <p>Wind Speed: {{ city_data.wind_speed }}</p>
-    <p>Wind Gust: {{ city_data.wind_gust }}</p>
-    <p>Wind Direction: {{ city_data.wind_deg }}</p>
-    <p>Time: {{ city_data.dt }}</p>
-    <p>Timezone: {{ city_data.tz }}</p>
+
+
+
+	<table>
+		<thead>
+			<tr>
+				<th>Parameter</th>
+				<th>Value</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>City</td>
+				<td>{{ city_data.city }}</td>
+			</tr>
+			<tr>
+				<td>Country</td>
+				<td>{{city_data.country}}</td>
+			</tr>
+			<tr>
+				<td>Temperature</td>
+				<td>{{ city_data.temperature }} °C</td>
+			</tr>
+			<tr>
+				<td>Pressure</td>
+				<td>{{ city_data.pressure }}</td>
+			</tr>
+			<tr>
+				<td>Humidity</td>
+				<td>{{ city_data.humidity }}</td>
+			</tr>
+			<tr>
+				<td>Weather Condition</td>
+				<td>{{ city_data.weather_condition }}</td>
+			</tr>
+			<tr>
+				<td>Wind Speed</td>
+				<td>{{ city_data.wind_speed }}</td>
+			</tr>
+			<tr>
+				<td>Wind Gust</td>
+				<td>{{ city_data.wind_gust }}</td>
+			</tr>
+			<tr>
+				<td>Wind Direction</td>
+				<td>{{ city_data.wind_deg }}</td>
+			</tr>
+			<tr>
+				<td>Time</td>
+				<td>{{ city_data.dt }}</td>
+			</tr>
+			<tr>
+				<td>Timezone</td>
+				<td>{{ city_data.tz }}</td>
+			</tr>
+		</tbody>
+	</table>
 </body>
 </html>
 
