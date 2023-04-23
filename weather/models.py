@@ -14,7 +14,7 @@ class City(models.Model):
     wind_speed = models.FloatField()
     wind_gust = models.FloatField()
     wind_deg = models.FloatField()
-    datetime = models.FloatField()
+    datetime = models.DateTimeField()
     timezone = models.FloatField()
 
     def __str__(self):        return self.name

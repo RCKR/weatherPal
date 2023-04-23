@@ -1,5 +1,6 @@
 import requests
 from config import WEATHER_API_KEY
+import datetime as dt
 
 def fetch_weather_data(city_name: str) -> dict:
     url = f'http://api.openweathermap.org/data/2.5/weather?q={city_name}&appid={WEATHER_API_KEY}'
@@ -12,7 +13,7 @@ def fetch_weather_data(city_name: str) -> dict:
             'city': weather_data['name'],
             'country': weather_data['sys']['country'],
             'coordinates': ';'.join(str(v) for v in weather_data['coord'].values()),
-            'temperature': weather_data['main']['temp'],
+            'temperature': round(weather_data['main']['temp'] -273.15, 2),
             'pressure': weather_data['main']['pressure'],
             'humidity': weather_data['main']['humidity'],
             'weather_condition': weather_data['weather'][0]['description'],
@@ -20,7 +21,7 @@ def fetch_weather_data(city_name: str) -> dict:
             'wind_speed': weather_data['wind']['speed'],
             'wind_gust': weather_data['wind'].get('gust'),
             'wind_deg': weather_data['wind']['deg'],
-            'dt': weather_data['dt'],
+            'dt': str(dt.datetime.fromtimestamp(weather_data['dt'])),
             'tz': weather_data['timezone']
         }
         return weather
