@@ -14,7 +14,7 @@
   nav {
     display: flex;
     align-items: center;
-    background-color: #333;
+    background-color: #222;
     color: #fff;
     height: 60px;
     margin-bottom: 30px;
@@ -47,6 +47,23 @@
     display: flex;
     align-items: center;
     margin-right: 20px;
+  }
+
+  /* Style for the profile button */
+  .profile-btn {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+  }
+
+  /* Style for the profile picture */
+  .profile-btn img {
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
   }
   
   
